@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -48,6 +47,7 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dgvEventos = new System.Windows.Forms.DataGridView();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -87,15 +87,6 @@
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Opciones";
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Location = new System.Drawing.Point(156, 55);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(93, 27);
-            this.btnLimpiar.TabIndex = 21;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
             // 
             // btnEditar
             // 
@@ -248,6 +239,15 @@
             this.dgvEventos.Size = new System.Drawing.Size(477, 450);
             this.dgvEventos.TabIndex = 6;
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(345, 55);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(93, 27);
+            this.btnLimpiar.TabIndex = 21;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            // 
             // FrmEventos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,7 +281,6 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnGuardar;
@@ -290,5 +289,6 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridView dgvEventos;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

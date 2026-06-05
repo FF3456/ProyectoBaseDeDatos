@@ -30,6 +30,7 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -38,14 +39,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbHorario = new System.Windows.Forms.ComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.clbRequerimientos = new System.Windows.Forms.CheckedListBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -53,8 +46,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
@@ -62,11 +59,14 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.dgvReservas = new System.Windows.Forms.DataGridView();
+            this.btnBuscarMisReservas = new System.Windows.Forms.Button();
+            this.btnEliminarReserva = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAmbientesDisponibles)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -95,6 +95,24 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Reserva";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Clase",
+            "",
+            "Reunión",
+            "",
+            "Evento",
+            "",
+            "GP",
+            "",
+            "Ayudantía"});
+            this.comboBox2.Location = new System.Drawing.Point(141, 60);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(200, 21);
+            this.comboBox2.TabIndex = 8;
             // 
             // numericUpDown1
             // 
@@ -165,111 +183,24 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "HORARIOS";
             // 
-            // cbHorario
-            // 
-            this.cbHorario.FormattingEnabled = true;
-            this.cbHorario.Items.AddRange(new object[] {
-            "07:15 - 08:00",
-            "08:00 - 08:45",
-            "08:55 - 09:40",
-            "..."});
-            this.cbHorario.Location = new System.Drawing.Point(133, 19);
-            this.cbHorario.Name = "cbHorario";
-            this.cbHorario.Size = new System.Drawing.Size(201, 21);
-            this.cbHorario.TabIndex = 6;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.cbHorario);
-            this.groupBox2.Location = new System.Drawing.Point(23, 296);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(350, 68);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Entre semana";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.dateTimePicker2);
-            this.groupBox3.Location = new System.Drawing.Point(22, 375);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(350, 97);
-            this.groupBox3.TabIndex = 8;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Fin de semana";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(33, 54);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 13);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Fin";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(33, 34);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Inicio";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(135, 28);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(199, 20);
-            this.dateTimePicker2.TabIndex = 0;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(156, 429);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(199, 20);
-            this.dateTimePicker3.TabIndex = 1;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Clase",
-            "",
-            "Reunión",
-            "",
-            "Evento",
-            "",
-            "GP",
-            "",
-            "Ayudantía"});
-            this.comboBox2.Location = new System.Drawing.Point(141, 60);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 21);
-            this.comboBox2.TabIndex = 8;
-            // 
             // clbRequerimientos
             // 
             this.clbRequerimientos.FormattingEnabled = true;
             this.clbRequerimientos.Items.AddRange(new object[] {
             "Computadoras",
-            "Proyector",
             "Audio",
             "Enchufes",
-            "Internet",
-            "Aire acondicionado"});
-            this.clbRequerimientos.Location = new System.Drawing.Point(22, 521);
+            "Internet"});
+            this.clbRequerimientos.Location = new System.Drawing.Point(22, 450);
             this.clbRequerimientos.Name = "clbRequerimientos";
-            this.clbRequerimientos.Size = new System.Drawing.Size(198, 94);
+            this.clbRequerimientos.Size = new System.Drawing.Size(198, 64);
             this.clbRequerimientos.TabIndex = 9;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(21, 484);
+            this.label9.Location = new System.Drawing.Point(21, 413);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(215, 25);
             this.label9.TabIndex = 10;
@@ -290,58 +221,94 @@
             this.dgvAmbientesDisponibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAmbientesDisponibles.Location = new System.Drawing.Point(408, 66);
             this.dgvAmbientesDisponibles.Name = "dgvAmbientesDisponibles";
-            this.dgvAmbientesDisponibles.Size = new System.Drawing.Size(363, 159);
+            this.dgvAmbientesDisponibles.Size = new System.Drawing.Size(493, 201);
             this.dgvAmbientesDisponibles.TabIndex = 12;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(415, 251);
+            this.button1.Location = new System.Drawing.Point(408, 289);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 31);
+            this.button1.Size = new System.Drawing.Size(136, 31);
             this.button1.TabIndex = 13;
             this.button1.Text = "Buscar Ambientes";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(598, 251);
+            this.button2.Location = new System.Drawing.Point(550, 289);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(154, 31);
+            this.button2.Size = new System.Drawing.Size(136, 31);
             this.button2.TabIndex = 14;
             this.button2.Text = "Reservar";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(417, 315);
+            this.button3.Location = new System.Drawing.Point(692, 289);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(154, 31);
+            this.button3.Size = new System.Drawing.Size(136, 31);
             this.button3.TabIndex = 15;
             this.button3.Text = "Limpiar";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(598, 315);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(154, 31);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Cancelar Reserva";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(417, 375);
+            this.button5.Location = new System.Drawing.Point(834, 289);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(154, 31);
+            this.button5.Size = new System.Drawing.Size(136, 31);
             this.button5.TabIndex = 17;
             this.button5.Text = "Ver Detalle";
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(135, 28);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(199, 20);
+            this.dateTimePicker2.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(33, 34);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Inicio";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(33, 54);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(21, 13);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Fin";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.dateTimePicker2);
+            this.groupBox3.Controls.Add(this.dateTimePicker3);
+            this.groupBox3.Location = new System.Drawing.Point(22, 289);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(351, 97);
+            this.groupBox3.TabIndex = 8;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Horario de la Reserva";
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Location = new System.Drawing.Point(135, 54);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(199, 20);
+            this.dateTimePicker3.TabIndex = 1;
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(415, 445);
+            this.checkBox1.Location = new System.Drawing.Point(415, 559);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(122, 17);
             this.checkBox1.TabIndex = 18;
@@ -350,14 +317,14 @@
             // 
             // dateTimePicker4
             // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(553, 537);
+            this.dateTimePicker4.Location = new System.Drawing.Point(553, 651);
             this.dateTimePicker4.Name = "dateTimePicker4";
             this.dateTimePicker4.Size = new System.Drawing.Size(199, 20);
             this.dateTimePicker4.TabIndex = 3;
             // 
             // dateTimePicker5
             // 
-            this.dateTimePicker5.Location = new System.Drawing.Point(553, 595);
+            this.dateTimePicker5.Location = new System.Drawing.Point(553, 709);
             this.dateTimePicker5.Name = "dateTimePicker5";
             this.dateTimePicker5.Size = new System.Drawing.Size(199, 20);
             this.dateTimePicker5.TabIndex = 19;
@@ -370,7 +337,7 @@
             "Semanal",
             "Mensual",
             "Anual"});
-            this.comboBox3.Location = new System.Drawing.Point(553, 484);
+            this.comboBox3.Location = new System.Drawing.Point(553, 598);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(199, 21);
             this.comboBox3.TabIndex = 20;
@@ -378,7 +345,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(449, 487);
+            this.label11.Location = new System.Drawing.Point(449, 601);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(60, 13);
             this.label11.TabIndex = 22;
@@ -387,7 +354,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(449, 537);
+            this.label12.Location = new System.Drawing.Point(449, 651);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(65, 13);
             this.label12.TabIndex = 23;
@@ -396,17 +363,46 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(449, 595);
+            this.label13.Location = new System.Drawing.Point(449, 709);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(54, 13);
             this.label13.TabIndex = 24;
             this.label13.Text = "Fecha Fin";
             // 
+            // dgvReservas
+            // 
+            this.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReservas.Location = new System.Drawing.Point(408, 343);
+            this.dgvReservas.Name = "dgvReservas";
+            this.dgvReservas.Size = new System.Drawing.Size(493, 201);
+            this.dgvReservas.TabIndex = 25;
+            // 
+            // btnBuscarMisReservas
+            // 
+            this.btnBuscarMisReservas.Location = new System.Drawing.Point(594, 551);
+            this.btnBuscarMisReservas.Name = "btnBuscarMisReservas";
+            this.btnBuscarMisReservas.Size = new System.Drawing.Size(136, 31);
+            this.btnBuscarMisReservas.TabIndex = 26;
+            this.btnBuscarMisReservas.Text = "Buscar Mis Reservas";
+            this.btnBuscarMisReservas.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminarReserva
+            // 
+            this.btnEliminarReserva.Location = new System.Drawing.Point(736, 551);
+            this.btnEliminarReserva.Name = "btnEliminarReserva";
+            this.btnEliminarReserva.Size = new System.Drawing.Size(136, 31);
+            this.btnEliminarReserva.TabIndex = 27;
+            this.btnEliminarReserva.Text = "Cancelar Reserva";
+            this.btnEliminarReserva.UseVisualStyleBackColor = true;
+            // 
             // FrmReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 749);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.btnEliminarReserva);
+            this.Controls.Add(this.btnBuscarMisReservas);
+            this.Controls.Add(this.dgvReservas);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -415,7 +411,6 @@
             this.Controls.Add(this.dateTimePicker4);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -423,21 +418,20 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.clbRequerimientos);
-            this.Controls.Add(this.dateTimePicker3);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Name = "FrmReservas";
             this.Text = "FrmReservas";
+            this.Load += new System.EventHandler(this.FrmReservas_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAmbientesDisponibles)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAmbientesDisponibles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,13 +449,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbHorario;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.CheckedListBox clbRequerimientos;
         private System.Windows.Forms.Label label9;
@@ -470,8 +457,12 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
         private System.Windows.Forms.DateTimePicker dateTimePicker5;
@@ -479,5 +470,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DataGridView dgvReservas;
+        private System.Windows.Forms.Button btnBuscarMisReservas;
+        private System.Windows.Forms.Button btnEliminarReserva;
     }
 }

@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -37,19 +39,21 @@
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblFecha = new System.Windows.Forms.ToolStripStatusLabel();
             this.panelSidebar = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.timerFechaHora = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1.SuspendLayout();
             this.panelSidebar.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
             // 
+            this.statusStrip1.BackColor = System.Drawing.Color.White;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblUsuario,
             this.toolStripStatusLabel1,
@@ -58,9 +62,9 @@
             this.lblEstado,
             this.toolStripStatusLabel3,
             this.lblFecha});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 331);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 727);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(645, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1370, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -108,89 +112,103 @@
             // 
             // panelSidebar
             // 
-            this.panelSidebar.BackColor = System.Drawing.Color.DimGray;
-            this.panelSidebar.Controls.Add(this.button7);
-            this.panelSidebar.Controls.Add(this.button6);
-            this.panelSidebar.Controls.Add(this.button5);
-            this.panelSidebar.Controls.Add(this.button4);
-            this.panelSidebar.Controls.Add(this.button3);
+            this.panelSidebar.BackColor = System.Drawing.Color.Transparent;
             this.panelSidebar.Controls.Add(this.button2);
+            this.panelSidebar.Controls.Add(this.button3);
+            this.panelSidebar.Controls.Add(this.button4);
+            this.panelSidebar.Controls.Add(this.button5);
+            this.panelSidebar.Controls.Add(this.button6);
+            this.panelSidebar.Controls.Add(this.button7);
             this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSidebar.Location = new System.Drawing.Point(0, 0);
             this.panelSidebar.Name = "panelSidebar";
-            this.panelSidebar.Size = new System.Drawing.Size(178, 331);
+            this.panelSidebar.Size = new System.Drawing.Size(178, 727);
             this.panelSidebar.TabIndex = 2;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(8, 241);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(149, 32);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Salir";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(8, 203);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(149, 32);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Reportes";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(8, 165);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(149, 32);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Eventos";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(8, 127);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(149, 32);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Reservas";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(8, 89);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 32);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Ambientes";
-            this.button3.UseVisualStyleBackColor = true;
+            this.panelSidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSidebar_Paint);
             // 
             // button2
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(8, 51);
+            this.button2.Location = new System.Drawing.Point(8, 61);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 32);
+            this.button2.Size = new System.Drawing.Size(149, 48);
             this.button2.TabIndex = 1;
             this.button2.Text = "Usuarios";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.buttonUsuarios_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(8, 130);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(149, 48);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Ambientes";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.buttonAmbientes_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(8, 198);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(149, 48);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Reservas";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.buttonReservas_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(8, 262);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(149, 48);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Eventos";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.buttonEventos_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(8, 326);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(149, 48);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Reportes";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.buttonReportes_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(8, 391);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(149, 48);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "Salir";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.buttonSalir_Click);
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelContenedor.BackColor = System.Drawing.Color.Transparent;
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(178, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(467, 331);
+            this.panelContenedor.Size = new System.Drawing.Size(1192, 727);
             this.panelContenedor.TabIndex = 3;
+            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
+            // 
+            // timerFechaHora
+            // 
+            this.timerFechaHora.Interval = 1000;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(645, 353);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelSidebar);
             this.Controls.Add(this.statusStrip1);
@@ -221,6 +239,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
+        private System.Windows.Forms.Timer timerFechaHora;
     }
 }
 

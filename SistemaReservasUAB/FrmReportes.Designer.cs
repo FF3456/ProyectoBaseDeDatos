@@ -29,29 +29,30 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
             this.btnGenerarReportes = new System.Windows.Forms.Button();
             this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.tabPage4.SuspendLayout();
@@ -63,7 +64,6 @@
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -79,16 +79,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 115);
             this.panel1.TabIndex = 1;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(297, 22);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(251, 25);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "FILTROS GENERALES";
             // 
             // btnGenerarReportes
             // 
@@ -131,6 +121,16 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Fecha Inicio";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(297, 22);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(251, 25);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "FILTROS GENERALES";
+            // 
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.dataGridView6);
@@ -141,6 +141,15 @@
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Disponibilidad";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView6
+            // 
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView6.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.Size = new System.Drawing.Size(786, 303);
+            this.dataGridView6.TabIndex = 1;
             // 
             // tabPage5
             // 
@@ -195,13 +204,13 @@
             this.tabPage3.Text = "Uso por Carrera";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // dataGridView3
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(365, 16);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(290, 21);
-            this.comboBox1.TabIndex = 0;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(21, 59);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(749, 229);
+            this.dataGridView3.TabIndex = 2;
             // 
             // label3
             // 
@@ -212,13 +221,13 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Carrera";
             // 
-            // dataGridView3
+            // comboBox1
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(21, 59);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(749, 229);
-            this.dataGridView3.TabIndex = 2;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(365, 16);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(290, 21);
+            this.comboBox1.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -259,6 +268,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(786, 303);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // tabControl1
             // 
@@ -275,15 +285,6 @@
             this.tabControl1.Size = new System.Drawing.Size(800, 335);
             this.tabControl1.TabIndex = 7;
             // 
-            // dataGridView6
-            // 
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView6.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(786, 303);
-            this.dataGridView6.TabIndex = 1;
-            // 
             // FrmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,6 +297,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabPage7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.tabPage4.ResumeLayout(false);
@@ -308,7 +310,6 @@
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -16,7 +16,26 @@ namespace SistemaReservasUAB
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            // Mostrar primero el formulario de login
+            using (var login = new FrmLogin())
+            {
+                var result = login.ShowDialog();
+
+                if (result == DialogResult.OK && login.AuthenticatedUser != null)
+                {
+                    var main = new Form1();
+                    main.UsuarioActual = login.AuthenticatedUser.Usuario;
+                    main.RolActual = login.AuthenticatedUser.Rol;
+                    main.ActualizarUsuario();
+                    Application.Run(main);
+                }
+                else
+                {
+                    // Si el usuario cancela o no se autentica, salir
+                    return;
+                }
+            }
         }
     }
 }

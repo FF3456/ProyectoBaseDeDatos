@@ -37,13 +37,16 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.numCapacidad = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.clbCaracteristicas = new System.Windows.Forms.ComboBox();
             this.cbTipoAmbiente = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDisponibilidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCapacidad)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -63,7 +66,7 @@
             // dgvDisponibilidad
             // 
             this.dgvDisponibilidad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDisponibilidad.Location = new System.Drawing.Point(26, 19);
+            this.dgvDisponibilidad.Location = new System.Drawing.Point(22, 19);
             this.dgvDisponibilidad.Name = "dgvDisponibilidad";
             this.dgvDisponibilidad.Size = new System.Drawing.Size(551, 184);
             this.dgvDisponibilidad.TabIndex = 22;
@@ -137,30 +140,29 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(25, 67);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(362, 177);
+            this.groupBox1.Size = new System.Drawing.Size(502, 203);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Reserva";
             // 
-            // panel1
+            // label2
             // 
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 39);
-            this.panel1.TabIndex = 28;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Horario";
             // 
             // clbCaracteristicas
             // 
             this.clbCaracteristicas.FormattingEnabled = true;
             this.clbCaracteristicas.Items.AddRange(new object[] {
-            "Computadoras",
-            "Proyector",
-            "Audio",
-            "Internet",
-            "Enchufes",
-            "Aire acondicionado"});
+            "Disponible",
+            "",
+            "Ocupado",
+            "",
+            "En mantenimiento"});
             this.clbCaracteristicas.Location = new System.Drawing.Point(145, 154);
             this.clbCaracteristicas.Name = "clbCaracteristicas";
             this.clbCaracteristicas.Size = new System.Drawing.Size(200, 21);
@@ -186,9 +188,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(17, 157);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 13);
+            this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 10;
-            this.label3.Text = "CheckedListBox";
+            this.label3.Text = "Estados";
             // 
             // label1
             // 
@@ -199,30 +201,60 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Tipo de ambiente";
             // 
-            // label2
+            // panel1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Horario";
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 39);
+            this.panel1.TabIndex = 28;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvDisponibilidad);
-            this.groupBox2.Location = new System.Drawing.Point(19, 333);
+            this.groupBox2.Location = new System.Drawing.Point(19, 378);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(602, 209);
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ambientes Disponibles";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(185, 276);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 31);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Limpiar Filtros";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(25, 322);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(154, 31);
+            this.button2.TabIndex = 31;
+            this.button2.Text = "Reservar Ambiente";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(185, 322);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(154, 31);
+            this.button3.TabIndex = 32;
+            this.button3.Text = "Reservar Ambiente";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // FrmDisponibilidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 585);
+            this.ClientSize = new System.Drawing.Size(800, 710);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBuscarDisponibilidad);
@@ -257,5 +289,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
